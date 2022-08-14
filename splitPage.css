@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(255, 255, 255);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav {
+  flex: 1;
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.nav-tabs {
+  padding: 5px 15px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  transition: all 1s;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0px 25px;
+}
+
+.header {
+  background: radial-gradient(rgb(215, 203, 203), rgb(129, 129, 211));
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+}
+
+/*-----footer-----*/
+.footer {
+  /* z-index: -1; */
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 20px 0px;
+  position: relative;
+  /* left: 0; */
+  /* bottom: 0; */
+  width: 100%;
+  text-align: center;
+}
+.footer p {
+  color: #8a8a8a;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+  flex-basis: 10%;
+  text-align: center;
+}
+.footer-col-1 {
+  flex-basis: 64%;
+}
+.footer-col-2 {
+  flex-basis: 10%;
+}
+
+ul {
+  list-style-type: none;
+}
+.app-logo {
+  margin-top: 20px;
+}
+.app-logo img {
+  width: 140px;
+}
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright {
+  text-align: center;
+}
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+.row {
+  width: 100%;
+}
