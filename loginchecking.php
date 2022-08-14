@@ -11,9 +11,9 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
 	$userid="SELECT USER_ID FROM USER WHERE EMAIL='$email' ";
 	$useridresult=mysqli_query($conn,$userid);
 	$useridrow=mysqli_fetch_array($useridresult);
-	$lendedselect=" SELECT SUM(RECIEVE_AMOUNT) as ls FROM STATUS WHERE PAYEE_ID!=PAYER_ID && PAYEE_ID='$useridrow[0]' ";
+	$lendedselect=" SELECT SUM(RECIEVE_AMOUNT) as ls FROM STATUS where payee_id='$useridrow[0]' ";
 	$lendedresult=mysqli_query($conn,$lendedselect);
-	$borrowedselect=" SELECT SUM(OWE_AMOUNT) as bs FROM STATUS WHERE PAYEE_ID!=PAYER_ID && PAYEE_ID='$useridrow[0]' ";
+	$borrowedselect=" SELECT SUM(OWE_AMOUNT) as bs FROM STATUS where payer_id='$useridrow[0]' ";
 	$borrowedresult=mysqli_query($conn,$borrowedselect);
 	
 	
@@ -46,4 +46,10 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
 }
 
 
+
+
+//WHERE PAYEE_ID==PAYER_ID && PAYEE_ID='$useridrow[0]'
+//WHERE PAYEE_ID=PAYER_ID && PAYER_ID='$useridrow[0]'
 ?>
+
+
